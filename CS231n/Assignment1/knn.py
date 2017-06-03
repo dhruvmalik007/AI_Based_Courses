@@ -17,7 +17,7 @@ import random
 import numpy as np
 from data_utils import load_CIFAR10
 import matplotlib.pyplot as plt
-# for displaying matplotlib as the result in the window
+from cs231n.classifiers import KNearestNeighbor
 
 # rcparams set the default size of plots , mapping and other important features
 plt.rcParams['figure.figsize'] =(15.0,15.0)
@@ -50,7 +50,6 @@ X_test = np.reshape(X_test, (X_test.shape[0], -1))
 print X_train.shape, X_test.shape
 
 #using the pre-defined function  of the  classifier library , using the knn classifier function
-from cs231n.classifiers import KNearestNeighbor
 classifier.train(X_train, y_train)
 
 #  visualizing  the distance matrix: having  each row is a single test example and
